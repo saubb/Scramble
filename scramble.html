@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scramble Game</title>
+  <link rel="stylesheet" href="scrable.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Scramble Game</h1>
+
+    <div class="controls">
+      <label>Difficulty:
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+      <span id="timer">Time: <strong>60</strong>s</span>
+      <span id="score">Score: <strong>0</strong></span>
+    </div>
+
+    <p>Rearrange the letters to form a meaningful word:</p>
+    <div class="scrambled-word" id="scrambledWord">----</div>
+    <input type="text" id="userInput" placeholder="Enter your guess" />
+    <button onclick="submitGuess()">Submit</button>
+    <p id="resultMessage"></p>
+    <button onclick="resetGame()">Play Again</button>
+  </div>
+
+  <script src="scramble.js"></script>
+</body>
+</html>
